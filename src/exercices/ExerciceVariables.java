@@ -39,6 +39,15 @@ public class ExerciceVariables {
 		// dans ce fichier est inférieure ou égale à la dernière
 		// (de type entier) , afficher "ok" sinon afficher "ko"
 		System.out.println(d <= var3 ? "ok":"ko");
+		
+		//Application d'un masque de bits pour tester la valeur d'un bit
+		//d'un int
+		int monInt = 0b11111011;
+		int apresMasqueBinaire = monInt & 0b00000001;
+		System.out.println(apresMasqueBinaire != 0 ? "ok":"ko");
+		
+		System.out.println((monInt & 0b0000001) != 0 ? "ok":"ko");
+		
 
 	}
 }
