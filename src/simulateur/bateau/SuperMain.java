@@ -2,11 +2,13 @@ package simulateur.bateau;
 
 import static simulateur.bateau.Bateau.*;
 
+import simulateur.bateau.piece.Coque;
+
 
 public class SuperMain {
 
 	public static void main(String[] args) {
-		int utilisationDUnImporStatique = 1000/POIDS_TONNEAU_TONNES;
+		int utilisationDUnImportStatique = 1000/POIDS_TONNEAU_TONNES;
 		
 		//Instanciation d'un bateau
 		Bateau blackPearl = new Bateau("oh MONDIEU C'EST LE BLACK PEARL!!!");

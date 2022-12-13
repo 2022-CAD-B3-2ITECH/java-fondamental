@@ -1,4 +1,4 @@
-package simulateur.bateau;
+package simulateur.bateau.piece;
 
 public class Coque {
 	
