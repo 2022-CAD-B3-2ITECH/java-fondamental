@@ -2,11 +2,14 @@ package simulateur.bateau;
 
 public class Bateau {
 	
-	public static int VARIABLE_STATIQUE = 0;
-	public int variablePasStatique = 0;
+	private static int nombreDeBateauxConstruits;
 	
 	private String nom;
 	private double miles;
+	
+	public Bateau(String nom) {
+		this.nom = nom;
+	}
 	
 	public void prendLaMer() {
 		System.out.println("Je prends la mer");
@@ -29,10 +32,6 @@ public class Bateau {
 
 	public String getNom() {
 		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
 	}
 
 }
