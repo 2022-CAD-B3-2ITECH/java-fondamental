@@ -1,6 +1,5 @@
 @startuml
-!theme crt-amber
-abstract class Animal {
+class Animal {
    + void bouge()
    + void seReproduit()
 }

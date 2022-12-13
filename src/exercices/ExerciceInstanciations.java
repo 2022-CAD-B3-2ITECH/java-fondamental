@@ -13,6 +13,5 @@ public class ExerciceInstanciations {
 		//Affectation de la valeur null à cet objet
 		monDeuxiemeObjet = null;
 		
-
 	}
 }
