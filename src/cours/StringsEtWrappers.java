@@ -8,6 +8,9 @@ public class StringsEtWrappers{
 	public static void main(String[] args) {
         
         //Chaîne de caractère
+		String maChaineDeCaractères = null;
+		String maChaineDeCaractèresNonNull = "Coucou";
+		maChaineDeCaractèresNonNull += " les gens";
 		
 		// Autoboxing
         
