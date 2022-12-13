@@ -4,13 +4,21 @@ public class Bateau {
 	
 	private static int nombreDeBateauxConstruits;
 	
-	private String nom;
+	public static int POIDS_TONNEAU_TONNES = 10;
+	
+	private final String nom;
 	private double miles;
+	private Coque coque;
 	
 	public Bateau(String nom) {
+		nombreDeBateauxConstruits++;
 		this.nom = nom;
 	}
 	
+	public static int getNombreDeBateauxConstruits() {
+		return nombreDeBateauxConstruits;
+	}
+
 	public void prendLaMer() {
 		System.out.println("Je prends la mer");
 	}
@@ -33,5 +41,15 @@ public class Bateau {
 	public String getNom() {
 		return nom;
 	}
+
+	public Coque getCoque() {
+		return coque;
+	}
+
+	public void setCoque(Coque coque) {
+		this.coque = coque;
+	}
+	
+	
 
 }
