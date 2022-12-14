@@ -38,7 +38,6 @@ public class SuperMain {
 		canoeFamilial.navigue();
 		
 		BateauCivil bateauCivil = new BateauCivil("Poseidon");
-		bateauCivil.setNombrePassager(120);
 		bateauCivil.navigue(340);
 		
 		System.out.println("le bateau civil est : " + bateauCivil);

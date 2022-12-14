@@ -1,7 +1,5 @@
 package simulateur.bateau;
 
-import java.util.Objects;
-
 import simulateur.bateau.piece.Coque;
 import simulateur.bateau.piece.Moteur;
 
@@ -15,10 +13,12 @@ public class Bateau {
 	private double miles;
 	private Coque coque;
 	private Moteur moteur;
+	private final int identifiantUnique;
 
 	public Bateau(String nom) {
 		nombreDeBateauxConstruits++;
 		this.nom = nom;
+		this.identifiantUnique = nombreDeBateauxConstruits;
 	}
 
 	public static int getNombreDeBateauxConstruits() {
@@ -66,7 +66,24 @@ public class Bateau {
 
 	@Override
 	public String toString() {
-		return this.nom;
+		return this.nom + "-" + this.identifiantUnique;
+	}
+
+	@Override
+	public int hashCode() {
+		return this.identifiantUnique;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Bateau)) {
+			return false;
+		}
+		Bateau other = (Bateau) obj;
+		return this.identifiantUnique == other.identifiantUnique;
 	}
 
 }

@@ -11,6 +11,16 @@ public class SimulationAnimaux {
 		Chat chat = new Chat();
 		chat.getNombreDePattes();
 		
+		ChauveSouris chauveSouris = new ChauveSouris();
+		faitVoler(chauveSouris);
+		
+		chauveSouris.bouge();
+		faitVoler(new AvionEnPapier());
+		
+	}
+	
+	public static void faitVoler(Volant volant) {
+		volant.vole();
 	}
 
 }
