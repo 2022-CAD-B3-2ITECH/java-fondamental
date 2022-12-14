@@ -32,6 +32,31 @@ public class SuperMain {
 		blackPearl.arriveAuPort();
 		System.out.println(blackPearl.getNom());
 		
+		
+		CanoeFamilial canoeFamilial = new CanoeFamilial(4);
+		canoeFamilial.setNom("Canoe");
+		canoeFamilial.navigue();
+		
+		BateauCivil bateauCivil = new BateauCivil("Poseidon");
+		bateauCivil.setNombrePassager(120);
+		bateauCivil.navigue(340);
+		
+		System.out.println("le bateau civil est : " + bateauCivil);
+		
+		BateauCivil bateauCivil2 = new BateauCivil("Poseidon");
+		
+		System.out.println("Comparaison d'objets à partir des 'références', avec l'opérateur ==");
+		System.out.println(bateauCivil == bateauCivil2);
+		
+		System.out.println("Comparaison d'objets à partir de règles fonctionnelles , avec la méthode .equals()");
+		System.out.println(bateauCivil.equals(bateauCivil2));
+		
+		
+		System.out.println("bateauCivil2 instanceof BateauCivil " +  (bateauCivil2 instanceof BateauCivil));
+		System.out.println("bateauCivil2 instanceof Bateau " +  (bateauCivil2 instanceof Bateau));
+		System.out.println("bateauCivil2 instanceof Object " +  (bateauCivil2 instanceof Object));
+		System.out.println("blackPearl instanceof BateauCivil " +  (blackPearl instanceof BateauCivil));
+		
 	}
 
 }

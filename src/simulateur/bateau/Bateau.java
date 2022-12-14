@@ -1,5 +1,7 @@
 package simulateur.bateau;
 
+import java.util.Objects;
+
 import simulateur.bateau.piece.Coque;
 import simulateur.bateau.piece.Moteur;
 
@@ -60,6 +62,11 @@ public class Bateau {
 
 	public void setMoteur(Moteur moteur) {
 		this.moteur = moteur;
+	}
+
+	@Override
+	public String toString() {
+		return this.nom;
 	}
 
 }

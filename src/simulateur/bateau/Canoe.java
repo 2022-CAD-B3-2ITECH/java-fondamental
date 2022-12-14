@@ -6,8 +6,8 @@ package simulateur.bateau;
  */
 public class Canoe {
 	
-	private String nom;
-	private int nombreRames;
+	protected String nom;
+	protected int nombreRames;
 	
 	public String getNom() {
 		return nom;
@@ -20,6 +20,10 @@ public class Canoe {
 	}
 	public void setNombreRames(int nombreRames) {
 		this.nombreRames = nombreRames;
+	}
+	
+	public void navigue() {
+		System.out.println(this.nom + " navigue grâce à ses " + this.nombreRames + " rames");
 	}
 	
 }
