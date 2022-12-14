@@ -60,7 +60,7 @@ public class Conditions {
 			yield new Bateau("Qu'est ce que c'est que ces noms de bateaux ?");
 		}
 		};
-		bateau.getNom();
+		System.out.println("Un bateau a été créé avec le nom :" + bateau.getNom());
 		
 
 		System.out.println("\r\nConditions ternaires");
@@ -71,6 +71,7 @@ public class Conditions {
 		String messageAAfficher2 = forceElephant > forceRhinoceros 
 					? "elephant plus fort" : forceElephant == forceRhinoceros 
 						? "forces égales": "rhino plus fort";
+		System.out.println(messageAAfficher2);
 
 	}
 }
