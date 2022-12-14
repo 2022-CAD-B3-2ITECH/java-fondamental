@@ -57,6 +57,24 @@ public class SuperMain {
 		System.out.println("bateauCivil2 instanceof Object " +  (bateauCivil2 instanceof Object));
 		System.out.println("blackPearl instanceof BateauCivil " +  (blackPearl instanceof BateauCivil));
 		
+		
+		affichageNom(blackPearl);
+		affichageNom(bateauCivil2);
+		
+		afficheHashCode(blackPearl);
+		afficheHashCode(new Object());
+		afficheHashCode("lkjklj");
+		
+		Bateau bateau = bateauCivil2;
+		
+	}
+	
+	public static void affichageNom(Bateau bateau) {
+		System.out.println(bateau.getNom());
+	}
+	
+	public static void afficheHashCode(Object object) {
+		System.out.println("Le hash de l'objet vaut : " + object.hashCode());
 	}
 
 }
