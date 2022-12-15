@@ -1,0 +1,69 @@
+@startuml
+package simulateur.bateau{
+
+interface Cargo{
+   + void chargeTonnage(int tonnage)
+   + int dechargeTonnage()
+}
+
+interface Submersible{
+   + void plonge()
+   + void faitSurface()
+}
+
+class Bateau {
+   - static int nombreDeBateauxConstruits
+   - final String nom
+   - Coque coque
+   + static int getNombreDeBateauxConstruits()
+   + Bateau(String nom)
+   + void prendLaMer()
+   + void navigue(double miles)
+   + void arriveAuPort()
+   + String getNom()
+   + Coque getCoque()
+   + void setCoque(Coque coque)
+}
+
+class BateauCivil extends Bateau{
+   - int civil
+}
+
+class BateauMilitaire extends Bateau{
+   - int forceCanon
+   + void attaque(Bateau cible)
+}
+
+package piece{
+class Coque {
+	- int pointsDeVie
+	- int pointsDeVieMax
+	+ Coque(int pointsDeVieMax)
+	}
+}
+
+
+class Ravitailleur extends BateauMilitaire implements Cargo{
+
+}
+class PorteContainer extends BateauCivil implements Cargo{
+
+}
+
+class SousMarinAttaque extends BateauMilitaire implements Submersible{
+}
+
+
+class SousMarinCargo extends BateauMilitaire implements Submersible, Cargo{
+}
+
+Bateau -> Coque
+
+class Port{
+   +void charge(Cargo cargo)
+   +void decharge(Cargo cargo)
+}
+Port -> Cargo
+
+}
+@enduml

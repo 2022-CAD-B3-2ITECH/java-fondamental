@@ -1,5 +1,13 @@
 package cours.heritage;
 
+/**
+ * Un exemple de classe fille de Animal,
+ * qui implémente deux interfaces. Résultat: 
+ * ChauveSouris est un Animal, mais est aussi un Volant
+ * et est aussi un ChasseurUltraSon. Elle doit implémenter
+ * toutes les méthodes de ces interfaces et classes abstraites.
+ *
+ */
 public class ChauveSouris extends Animal implements Volant, ChasseurUltraSon{
 
 	@Override

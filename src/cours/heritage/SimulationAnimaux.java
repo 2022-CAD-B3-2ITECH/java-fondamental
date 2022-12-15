@@ -1,5 +1,10 @@
 package cours.heritage;
 
+/**
+ * Simulation d'animaux : utilise le polymorphisme
+ * avec des instances de Animal et de Volant.
+ *
+ */
 public class SimulationAnimaux {
 
 	public static void main(String[] args) {
@@ -8,7 +13,7 @@ public class SimulationAnimaux {
 		herisson1.getNombreDePattes();
 		
 		
-		Chat chat = new Chat();
+		Animal chat = new Chat();
 		chat.getNombreDePattes();
 		
 		ChauveSouris chauveSouris = new ChauveSouris();

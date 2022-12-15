@@ -1,5 +1,12 @@
 package cours.aeroport;
 
+/**
+ * Classe qui doit afficher un avion (en 3D sisi)
+ * A accès à altitude et carburant de l'avion 
+ * grâce à des getters, car 
+ * ces attributs sont encapsulés.
+ *
+ */
 public class AffichageAvion3D {
 	public static void main(String args[]) {
 		

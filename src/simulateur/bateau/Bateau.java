@@ -3,6 +3,10 @@ package simulateur.bateau;
 import simulateur.bateau.piece.Coque;
 import simulateur.bateau.piece.Moteur;
 
+/**
+ * Un Bateau
+ *
+ */
 public class Bateau {
 
 	private static int nombreDeBateauxConstruits;

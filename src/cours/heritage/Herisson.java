@@ -1,5 +1,9 @@
 package cours.heritage;
 
+/**
+ * Un autre animal...
+ *
+ */
 public class Herisson extends Animal {
 
 	@Override

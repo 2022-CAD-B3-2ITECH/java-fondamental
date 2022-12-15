@@ -1,7 +1,11 @@
 package cours.aeroport;
 
 /**
- * Classe gérant un avion
+ * Classe gérant un avion. Encapsule (protège)
+ * ses attributs (ou variables d'instance):
+ * choisit les méthodes disponibles pour tout le monde
+ * (avec le modificateur de visibilité public) et ce qu'elle
+ * garde pour elle (avec le modificateur de visibilité private).
  *
  */
 public class Avion {

@@ -2,6 +2,13 @@ package simulateur.bateau;
 
 import simulateur.bateau.piece.Coque;
 
+/**
+ * Utilise le polymorphisme pour contrôler des 
+ * bateaux : fait naviguer des instance de Bateau, 
+ * mais aussi de tout ce qui en hérite : des BateauCivil, 
+ * BateauMilitaire ....
+ *
+ */
 public class Controleur {
 
 	public static void main(String[] args) {

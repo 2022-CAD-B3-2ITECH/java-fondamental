@@ -1,5 +1,9 @@
 package simulateur.bateau.piece;
 
+/**
+ * Piece d'un bateau
+ *
+ */
 public class Coque {
 	
 	private int pointsDeVieMax;

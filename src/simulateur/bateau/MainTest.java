@@ -4,8 +4,12 @@ import static simulateur.bateau.Bateau.*;
 
 import simulateur.bateau.piece.Coque;
 
-
-public class SuperMain {
+/**
+ * Classe de test : utilisé pour instancier des objets
+ * et jouer avec les bateaux
+ *
+ */
+public class MainTest {
 
 	public static void main(String[] args) {
 		int utilisationDUnImportStatique = 1000/POIDS_TONNEAU_TONNES;

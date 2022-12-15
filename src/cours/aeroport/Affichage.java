@@ -1,5 +1,12 @@
 package cours.aeroport;
 
+/**
+ * Classe qui doit afficher un avion.
+ * A accès à altitude et carburant de l'avion 
+ * grâce à des getters, car 
+ * ces attributs sont encapsulés.
+ *
+ */
 public class Affichage {
 
 	public static void main(String args[]) {

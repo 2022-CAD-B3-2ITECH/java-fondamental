@@ -1,5 +1,9 @@
 package simulateur.bateau.piece;
 
+/**
+ * Moteur d'un bateau
+ *
+ */
 public class Moteur {
 	
 	private final int puissance;
