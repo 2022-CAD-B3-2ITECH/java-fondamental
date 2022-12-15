@@ -21,18 +21,35 @@ public class ExerciceTableaux {
     	float randomFloat = new Random().nextFloat() * 100;
     	
     	//Créer un tableau de 10 floats
+    	float[] flottes = new float[10];
     	
     	//Le remplir avec des float aléatoires
+    	for (int i = 0; i < flottes.length; i++) {
+			flottes[i] = new Random().nextFloat() * 100;
+		}
     	
     	//Afficher le résultat sur la console
+    	for (float f : flottes) {
+			System.out.println("Dans le premier tableau, j'ai : " + f);
+		}
     	
     	//Créer un nouveau tableau de 12 floats
+    	float[] flottes2 = new float[12];
     	
     	//y copier les dix éléments du premier tableau.
+    	for (int i = 0; i < flottes.length; i++) {
+    		flottes2[i] = flottes[i];
+		}
     	
     	//Mettre deux nouveaux float aléatoires dans les deux dernières 'cases'
+    	for (int i = flottes.length; i < flottes2.length; i++) {
+    		flottes2[i] =  new Random().nextFloat() * 100;
+		}
     	
     	//Afficher le nouveau tableau
+    	for (float f : flottes2) {
+			System.out.println("Dans le deuxième tableau, j'ai : " + f);
+		}
     	
     }
     
