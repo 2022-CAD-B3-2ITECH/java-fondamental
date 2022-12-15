@@ -6,6 +6,7 @@ package cours.heritage;
  */
 public class Herisson extends Animal {
 
+
 	@Override
 	public int getNombreDePattes() {
 		return 4;

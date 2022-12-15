@@ -12,7 +12,6 @@ public class SimulationAnimaux {
 		herisson1.bouge();
 		herisson1.getNombreDePattes();
 		
-		
 		Animal chat = new Chat();
 		chat.getNombreDePattes();
 		
@@ -21,6 +20,8 @@ public class SimulationAnimaux {
 		
 		chauveSouris.bouge();
 		faitVoler(new AvionEnPapier());
+		
+	
 		
 	}
 	
