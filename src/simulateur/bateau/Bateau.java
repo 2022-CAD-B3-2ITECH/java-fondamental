@@ -7,7 +7,7 @@ import simulateur.bateau.piece.Moteur;
  * Un Bateau
  *
  */
-public class Bateau {
+public class Bateau implements Comparable<Bateau> {
 
 	private static int nombreDeBateauxConstruits;
 
@@ -88,6 +88,11 @@ public class Bateau {
 		}
 		Bateau other = (Bateau) obj;
 		return this.identifiantUnique == other.identifiantUnique;
+	}
+
+	@Override
+	public int compareTo(Bateau other) {
+		return this.nom.compareTo(other.nom);
 	}
 
 }
