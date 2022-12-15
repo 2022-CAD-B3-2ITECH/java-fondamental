@@ -63,6 +63,7 @@ public class Collections {
 			System.out.println("Dans mon set, j'ai " + string);
 		}
 		
+		//Création d'une liste de bateaux
 		List<Bateau> mesBateaux = new ArrayList<>();
 		mesBateaux.add(new Bateau("Titanic"));
 		mesBateaux.add(new Bateau("Le flamboyant"));
@@ -74,6 +75,9 @@ public class Collections {
 			System.out.println(bateau);
 		}
 		
+		//Bateau implémente  : Comparable<Bateau> : il peut
+		//dont être comparé à n'importe quel bateau, 
+		//et donc être trié
 		java.util.Collections.sort(mesBateaux);
 
 		System.out.println("\r\nAvant le tri");

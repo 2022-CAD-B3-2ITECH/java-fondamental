@@ -3,6 +3,7 @@ package exercices;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,8 +28,10 @@ public class ExerciceCollection {
     	listeMots.add("fi");
     	
     	//Affichage du prix maximum
+    	System.out.println("Le prix maximum est: " + Collections.max(prix));
 
     	//Affichage du prix minimum
+    	System.out.println("Le prix maximum est: " + Collections.min(prix));
     	
     	
     	//Affichage de la liste
@@ -37,12 +40,18 @@ public class ExerciceCollection {
     	
     	//Inversion de la liste et affichage
     	System.out.println("Inversion de la liste");
+    	Collections.reverse(listeMots);
+    	affiche(listeMots);
     	
     	//Mélange de la liste et affichage
     	System.out.println("Mélange de la liste");
+    	Collections.shuffle(listeMots);
+    	affiche(listeMots);
     	
     	//Tri de la liste et affichage
     	System.out.println("Tri de la liste");
+    	Collections.sort(listeMots);
+    	affiche(listeMots);
         
     }
     
