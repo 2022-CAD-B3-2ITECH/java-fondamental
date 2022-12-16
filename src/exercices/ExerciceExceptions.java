@@ -8,7 +8,7 @@ public class ExerciceExceptions {
 		int resultat = 0;
 		//Décommenter la ligne ci-dessous et tenter de faire compiler le code 
 		//en gérant l'exception
-		//	resultat = calcule(4, 5);
+//			resultat = calcule(4, 5);
 	}
 
 	
