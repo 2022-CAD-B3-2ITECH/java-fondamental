@@ -9,9 +9,10 @@ import simulateur.bateau.Bateau;
 // Classe principale
 public class Tableaux {
 	public static void main(String[] args) {
+		
 		// Declaration d'un tableau sans l'alimenter
 		int[] nouveauTableau = new int[3];
-
+		
 		// Affectation des valeurs a un tableau
 		// Remarque : le premier indice du tableau est 0
 		nouveauTableau[1] = 4;

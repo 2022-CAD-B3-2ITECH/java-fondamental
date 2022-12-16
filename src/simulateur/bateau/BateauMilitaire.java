@@ -2,7 +2,7 @@ package simulateur.bateau;
 
 public class BateauMilitaire extends Bateau {
 	
-	int forceCanon;
+	private int forceCanon;
 
 	public BateauMilitaire(String nom) {
 		super(nom);
@@ -15,9 +15,22 @@ public class BateauMilitaire extends Bateau {
 	public void setForceCanon(int forceCanon) {
 		this.forceCanon = forceCanon;
 	}
-	
-	public void attaque(Bateau autreBateau) {
-		
+
+	public void attaque(Bateau cible) {
+		// this attaque cible
+		System.out.println(this + " attaque " + cible);
+		cible.getCoque().subitDegats(this.forceCanon);
+		if (cible.getCoque().isCoqueDetruite()) {
+			return;
+		}
+
+		// si cible peut contre attaquer, il le fait
+		if (cible instanceof BateauMilitaire) {
+			System.out.println(cible + " contre-attaque " + this);
+			BateauMilitaire cibleMilitaire = (BateauMilitaire) cible;
+			this.getCoque().subitDegats(cibleMilitaire.forceCanon);
+		}
+
 	}
 	
 	

@@ -29,7 +29,6 @@ public class ExerciceStreams {
 		
 		//On n'affiche que l'entreprise ayant le plus petit chiffre d'affaires
 		
-		
 		//Affichage uniquement des chiffres d'affaires (en utilisant mapToInt)
 		
 		//Calcul du chiffre d'affaires moyen

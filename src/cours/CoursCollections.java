@@ -1,6 +1,7 @@
 package cours;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.Set;
 
 import simulateur.bateau.Bateau;
 
-public class Collections {
+public class CoursCollections {
 
 	public static void main(String[] args) {
 		//Création d'une liste avec une instance d'ArrayList();
@@ -78,7 +79,7 @@ public class Collections {
 		//Bateau implémente  : Comparable<Bateau> : il peut
 		//dont être comparé à n'importe quel bateau, 
 		//et donc être trié
-		java.util.Collections.sort(mesBateaux);
+		Collections.sort(mesBateaux);
 
 		System.out.println("\r\nAvant le tri");
 		for (Bateau bateau : mesBateaux) {

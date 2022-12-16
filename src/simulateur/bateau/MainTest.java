@@ -69,6 +69,7 @@ public class MainTest {
 		afficheHashCode("lkjklj");
 		
 		Bateau bateau = bateauCivil2;
+		System.out.println(bateau.getEtatBateau());
 		
 	}
 	

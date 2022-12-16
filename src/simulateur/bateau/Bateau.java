@@ -18,6 +18,7 @@ public class Bateau implements Comparable<Bateau> {
 	private Coque coque;
 	private Moteur moteur;
 	private final int identifiantUnique;
+	public EtatBateau etatBateau = EtatBateau.OPERATIONNEL;
 
 	public Bateau(String nom) {
 		nombreDeBateauxConstruits++;
@@ -67,6 +68,18 @@ public class Bateau implements Comparable<Bateau> {
 	public void setMoteur(Moteur moteur) {
 		this.moteur = moteur;
 	}
+	
+	public EtatBateau getEtatBateau() {
+		return etatBateau;
+	}
+
+	public void setEtatBateau(EtatBateau etatBateau) {
+		this.etatBateau = etatBateau;
+	}
+	
+	public int getIdentifiantUnique() {
+		return identifiantUnique;
+	}
 
 	@Override
 	public String toString() {
@@ -94,5 +107,6 @@ public class Bateau implements Comparable<Bateau> {
 	public int compareTo(Bateau other) {
 		return this.nom.compareTo(other.nom);
 	}
+	
 
 }
