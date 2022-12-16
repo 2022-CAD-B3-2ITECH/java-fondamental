@@ -1,6 +1,6 @@
 package exercices;
 
-public class CalculException extends Exception {
+public class CalculException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
