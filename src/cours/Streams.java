@@ -13,7 +13,7 @@ public class Streams {
 
 	public static void main(String[] args) {
 
-		// Création d'une liste de Strings
+		// Création d'une liste de Bateaux
 		List<Bateau> superList = new ArrayList<>();
 		Bateau meduse = new Bateau("La Méduse");
 		superList.add(new Bateau("L'Hermione"));
@@ -24,10 +24,11 @@ public class Streams {
 		for (Bateau bateau : superList) {
 			System.out.println(bateau);
 		}
+		
 		// Création d'une classe implémentant Comparator pour trier
 		Collections.sort(superList, new BateauNumeroComparator());
 
-		// On peut trier en créant une classe inline
+		// On peut aussi trier en créant une classe inline
 		Collections.sort(superList, new Comparator<Bateau>() {
 			@Override
 			public int compare(Bateau bateau1, Bateau bateau2) {
@@ -35,14 +36,19 @@ public class Streams {
 			}
 		});
 
-		// On peut trier avec une lambda
+		// On peut aussi trier avec une lambda : cette manière et les deux précédentes sont
+		// trois manières d'écrire une classe qui implémente Comparator.
 		Collections.sort(superList,
 				(bateau1, bateau2) -> bateau1.getIdentifiantUnique() - bateau2.getIdentifiantUnique());
 
 		System.out.println("\r\nAprès le tri");
 
 		// Transformation d'une liste en streams
+
+		//Pour afficher
 		superList.stream().forEach(bateau -> System.out.println(bateau));
+		
+		//Pour filtrer puis afficher
 		superList.stream().filter(bateau -> bateau.getIdentifiantUnique() > 1)
 				.forEach(bateau -> System.out.println(bateau));
 
@@ -54,6 +60,7 @@ public class Streams {
 		List<Bateau> bateauFiltres = superList.parallelStream().filter(b -> b.getIdentifiantUnique() > 1)
 				.collect(Collectors.toList());
 
+		//Récupération de n'importe quel élément qui correspond à un Predicate
 		System.out.println(superList.parallelStream().anyMatch(b -> b.getNom().equals("La Licorne2")));
 
 	}

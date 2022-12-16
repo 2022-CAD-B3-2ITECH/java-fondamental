@@ -19,21 +19,54 @@ public class ExerciceStreams {
 
 		// Tous les exercices ci-dessous sont à faire avec Stream
 		// Affichage des entreprises
+		System.out.println("\r\n Affichage des entreprises");
+		superList.stream().forEach((e) -> {
+			System.out.println("L'entreprise est : " + e);
+		});
 
 		// Tri des entreprises par chiffre d'affaires décroissant
+		System.out.println("\r\n Affichage des entreprises par chiffre d'affaires décroissant");
+		superList.stream().sorted((e1, e2) -> {
+			return e2.getChiffreAffaires() - e1.getChiffreAffaires();
+		}).forEach(e -> System.out
+				.println("L'entreprise est : " + e + " et a comme chiffre d'affaires : " 
+						+ e.getChiffreAffaires()));
 
 		// On n'affiche que les trois entreprises ayant le plus grand chiffre d'affaires
-		
-		// On n'affiche que les trois entreprises ayant le plus grand chiffre d'affaires, 
+		System.out.println("\r\n Affichage des 3 entreprises ayant le plus grand chiffre d'affaires");
+		superList.stream().sorted((e1, e2) -> {
+			return e2.getChiffreAffaires() - e1.getChiffreAffaires();
+		}).limit(3).forEach(e -> System.out.println("L'entreprise dans le top 3 est : " + e
+				+ " et a comme chiffre d'affaires : " + e.getChiffreAffaires()));
+
+		// On n'affiche que les trois entreprises ayant le plus grand chiffre
+		// d'affaires,
 		// mais en ne prenant en compte que les entreprises actives
-		
-		//On n'affiche que l'entreprise ayant le plus petit chiffre d'affaires
-		
-		//Affichage uniquement des chiffres d'affaires (en utilisant mapToInt)
-		
-		//Calcul du chiffre d'affaires moyen
-		
-		//Calcul du chiffres d'affaires moyen d'entreprises actives
+		System.out.println("\r\n Affichage des 3 entreprises ayant le plus grand chiffre d'affaires, et actives");
+		superList.stream().filter(e -> e.isActif()).sorted((e1, e2) -> {
+			return e2.getChiffreAffaires() - e1.getChiffreAffaires();
+		}).limit(3).forEach(e -> System.out.println("L'entreprise dans le top 3 des actifs est : " + e
+				+ " et a comme chiffre d'affaires : " + e.getChiffreAffaires()));
+
+		// On n'affiche que l'entreprise ayant le plus petit chiffre d'affaires
+		System.out.println(
+				"\r\nL'entreprise avec le plus petit chiffre d'affaires est : " + 
+					superList.stream().sorted((e1, e2) -> {
+					return e1.getChiffreAffaires() - e2.getChiffreAffaires();
+				}).findFirst().get());
+
+		// Affichage uniquement des chiffres d'affaires (en utilisant mapToInt)
+		System.out.println("\r\nAffichage des chiffres d'affaires en utilisant mapToInt");
+		superList.stream().mapToInt(e -> e.getChiffreAffaires())
+				.forEach((ca) -> System.out.println("Le chiffre d'affaires vaut : " + ca));
+
+		// Calcul du chiffre d'affaires moyen
+		System.out.println("\r\nLa moyenne des chiffres d'affaires vaut : "
+				+ superList.stream().mapToInt(e -> e.getChiffreAffaires()).average());
+
+		// Calcul du chiffres d'affaires moyen d'entreprises actives
+		System.out.println("\r\nLa moyenne des chiffres d'affaires des entreprises actives vaut : "
+				+ superList.stream().filter(e -> e.isActif()).mapToInt(e -> e.getChiffreAffaires()).average());
 
 	}
 }
