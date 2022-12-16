@@ -9,6 +9,9 @@ public class SimulationPizzeria {
 	 * la création des objets. Ces objets sont aussi instanciés
 	 * avec une classe, mais déclarés comme étant une interface
 	 * ou classe abstraite.
+	 * Si l'on veut faire en sorte que les ingrédients soient typés
+	 * et différents selon les pizzerias, il vaut mieux utiliser le pattern
+	 * Fabrique abstraite, plus complet, mais complexe.
 	 * @param args
 	 */
 	public static void main(String[] args) {
